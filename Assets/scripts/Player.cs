@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
     Rigidbody2D rb;
     float xDir, yDir;
 
@@ -12,17 +11,6 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void FixedUpdate()
