@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class Gelo : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // criar um boolean que define se o chão é gelo ou água
+    // se o player passa pelo trigger do chao, o boolean troca
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float estadoChao = 1f;
+    
+    
 }
