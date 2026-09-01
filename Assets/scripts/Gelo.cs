@@ -6,7 +6,26 @@ public class Gelo : MonoBehaviour
     // se o player passa pelo trigger do chao, o boolean troca
     
 
-    public float estadoChao = 1f;
-    
-    
+    public bool estadoChao = true;
+    [SerializeField] GameObject breakingPrefab;
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        GameObject breaking = Instantiate(breakingPrefab, transform.position, Quaternion.identity);
+        Destroy(breaking, 1f);
+        estadoChao = false;
+    }
+
+    void Update()
+    {
+        if (estadoChao == false)
+        {
+            print("O chão é água");
+            Destroy(gameObject);
+        }
+        else
+        {
+            print("O chão é gelo");
+        }
+    }
 }
